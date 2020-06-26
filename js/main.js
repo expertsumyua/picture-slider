@@ -122,12 +122,13 @@ $('#slides ul li').click(function (e) {
 	$("#slides ul li").removeClass('active');
 	// на єлементе по которому кликнули добавляем класс active
 	$(this).addClass('active');
-	// получаем id элемента по которому кликнули
-	var id = e.currentTarget.dataset.id;
-
+	// получаем id  элемента по которому кликнули
+	// var id = e.currentTarget.dataset.id;
+	currentImage = e.currentTarget.dataset.id;
 	// меняем картинку в слайде
 	$("#main-slider img")
-		.attr("src", path + images[id]);
+		// .attr("src", path + images[id]);
+		.attr("src", path + images[currentImage]);
 });
 
 $("#main-slider img").click(function () {
